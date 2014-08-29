@@ -33,7 +33,21 @@
 # nearly sorted, the actual work will be much worse than expected).
 
 def ordered_search(index, ranks, keyword):
-
+    if keyword not in index:
+        return None
+    else:
+        search_results = index[keyword]
+        if search_results == []:
+            return search_results
+        else:
+            pivot = search_results.pop(0)
+            less, greater = [], []
+            for i in search_results:
+                if i <= pivot:
+                    less.append(i)
+                else:
+                    greater.append(i)
+            return ordered_search(index, less, keyword) + [pivot] + ordered_search(index, greater, keyword)
 
 
 cache = {
