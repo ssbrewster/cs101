@@ -11,6 +11,7 @@ class Graph(object):
         """
         Initializes the Graph to an empty graph with no nodes or edges.
         """
+        self._graph = {}
 
     def add_node(self, node):
         """
