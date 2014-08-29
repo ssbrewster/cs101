@@ -58,6 +58,8 @@ class Graph(object):
         Requires: node is a node in self.
         Returns a set of the nodes that are connected by and edge to node.
         """
+        if target in self._graph:
+            return set([node for node in self._graph if target in self._graph[node]])
     
     def __str__(self):
         """
