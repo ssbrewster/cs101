@@ -18,16 +18,17 @@ class Graph(object):
         If node is already in the graph, returns False and does not modify the graph.
         Otherwise, adds node to the graph and returns True.
         """
-
-    def has_node(self, node):
-        """
-        Returns True if node is a node in the graph.
-        """
         if node in self._graph:
             return False
         else:
             self._graph[node] = []
             return True
+
+    def has_node(self, node):
+        """
+        Returns True if node is a node in the graph.
+        """
+
 
     def add_edge(self, node1, node2):
         """
