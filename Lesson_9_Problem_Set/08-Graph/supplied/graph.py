@@ -65,4 +65,5 @@ class Graph(object):
         """
         Returns a string representation of the graph. 
         """
+        return str(self._graph)
 
