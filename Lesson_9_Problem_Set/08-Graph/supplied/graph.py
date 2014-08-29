@@ -51,6 +51,7 @@ class Graph(object):
         Requires: node is a node in self.
         Returns a frozenset of the nodes to which node is connected.
         """
+        return frozenset(self._graph[node])
 
     def get_inlinks(self, target):
         """
