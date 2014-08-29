@@ -23,7 +23,11 @@ class Graph(object):
         """
         Returns True if node is a node in the graph.
         """
-
+        if node in self._graph:
+            return False
+        else:
+            self._graph[node] = []
+            return True
 
     def add_edge(self, node1, node2):
         """
