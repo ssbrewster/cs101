@@ -28,7 +28,13 @@
 #                                long to run on inputs above 30.)
 
 def rabbits(n):
-
+    if n == 0 or n == 1:
+        return n
+    else:
+        if n <= 5:
+            return rabbits(n - 1) + rabbits(n - 2)
+        else:
+            return rabbits(n - 1) + rabbits(n - 2) - rabbits(n - 5)
 
 
 
