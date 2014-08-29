@@ -37,6 +37,8 @@ class Graph(object):
         Modifies: self
         Adds an edge from node1 to node2 to self.
         """
+        if node1 in self._graph and node2 in self._graph:
+            self._graph[node1].append(node2)
 
     def get_nodes(self):
         """
