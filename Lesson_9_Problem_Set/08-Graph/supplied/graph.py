@@ -44,6 +44,7 @@ class Graph(object):
         """
         Returns a frozenset containing the nodes in the graph.
         """
+        return frozenset(self._graph)
 
     def get_outlinks(self, node):
         """
