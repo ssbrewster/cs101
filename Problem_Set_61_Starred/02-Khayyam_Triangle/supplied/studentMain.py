@@ -27,7 +27,19 @@
 
 
 def triangle(n):
-
+    if n == 0:
+        return []
+    if n == 1:
+        return [[1]]
+    else:
+        prev = triangle(n-1)
+        new_line = [1]
+        for i in range (1,n/2 + (n % 2)):
+            new_line.append(prev[n-2][i-1] + prev[n-2][i])
+        for j in range (0,n/2):
+            new_line.append(new_line[n/2 - 1 - j])
+        prev.append(new_line)
+        return prev
 
 
 
