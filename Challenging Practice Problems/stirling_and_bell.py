@@ -104,7 +104,7 @@ def bell(n):
 #print stirling(5,5)
 #>>> 1
 
-#print stirling(20,15)
+print stirling(20,15)
 #>>> 452329200
 
 print stirling(10, 2)
@@ -119,6 +119,6 @@ print stirling(10, 2)
 #>>> 15
 #print bell(5)
 #>>> 52
-#print bell(15)
+print bell(15)
 #>>> 1382958545
 
